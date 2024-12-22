@@ -192,14 +192,15 @@ html,body{
 }
 #badge{
     width: 50%;
+    height: 18%;
     z-index: 5;
     position: relative;
     overflow: hidden;
     color: aliceblue;
     font-family: fantasy;
     justify-content: space-around;
-    translate: 8% -250%;
-    animation: flow 3s ease-in-out;
+    translate: 8% -200%;
+    
 
 
     
@@ -208,6 +209,28 @@ html,body{
     display: flex;
     justify-content: space-around;
     
+}
+#rtx-sticker{
+    z-index: 1;
+    transition: filter 0.3s ease-in-out, box-shadow 2s ease-in-out;
+}
+#rtx-sticker:hover{
+    filter: invert();
+    box-shadow: 0 0 2px 3px #68e012;
+}
+#intel-sticker{
+    transition: filter 0.3s ease-in-out, box-shadow 2s ease-in-out;
+}
+#intel-sticker:hover{
+    filter: invert();
+    box-shadow: 0 0 2px 3px #0a2bd0;
+}
+#win-sticker{
+    transition:filter 0.3s ease-in-out, box-shadow 2s ease-in-out;
+}
+#win-sticker:hover{
+    filter: contrast(0);
+    box-shadow: 0 0 2px 3px #999999;
 }
 #stick-container{
     display: flex;
@@ -306,5 +329,76 @@ html,body{
     }
     to{
         --angle:360deg;
+    }
+}
+
+.rtx-hold{
+    position: relative;
+    height: 100px;
+    width: 210px;
+    
+}
+.rtx-sticker{
+    z-index: 3;
+
+}
+.rtx-text{
+    translate: 40px 250%;
+    z-index: -1;
+    animation: revealText 1s ease-in-out forwards;
+    }
+
+.intel-hold{
+    position: relative;
+    height: 100px;
+    width: 80px;
+    
+}
+.intel-sticker{
+    z-index: 3;
+
+}
+
+.intel-text{
+    translate: 0px 250%;
+    z-index: -1;
+    animation: revealText1 1s ease-in-out forwards 0.4s;
+    }
+
+    .win-hold{
+        position: relative;
+        height: 100px;
+        width: 80px;
+        
+    }
+    .win-sticker{
+        z-index: 3;
+    
+    }
+    
+    .win-text{
+        translate: 0px 250%;
+        z-index: -1;
+        animation: revealText1 1s ease-in-out forwards 1s;
+        }
+
+
+@keyframes revealText{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        translate: 40px 10px;
+    }
+}
+
+@keyframes revealText1{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        translate: 0px 10px;
     }
 }
