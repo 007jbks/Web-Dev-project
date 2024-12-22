@@ -188,6 +188,7 @@ html,body{
 }
 #head-content{
     margin-left: 20%;
+    translate: -20px;
 }
 #badge{
     width: 50%;
@@ -197,7 +198,7 @@ html,body{
     color: aliceblue;
     font-family: fantasy;
     justify-content: space-around;
-    translate: 0px -200%;
+    translate: 8% -200%;
     animation: flow 3s ease-in-out;
 
 
@@ -236,12 +237,12 @@ html,body{
 }
 
 .breather{
-    animation: breathe 3s linear infinite;
+    animation: breathe 5s linear infinite;
     transition: transform 0.2s ease-in-out;
     filter: drop-shadow(10px 10px 15px rgba(0,0,0,0.9));
 }
 .breather2{
-    animation: breathe2 5s linear infinite;
+    animation: breathe2 7s linear infinite;
     transition: transform 0.4s ease-in-out;
 }
 
