@@ -197,14 +197,16 @@ html,body{
     color: aliceblue;
     font-family: fantasy;
     justify-content: space-around;
-    translate: 0px -300%;
+    translate: 0px -200%;
     animation: flow 3s ease-in-out;
+
 
     
 }
 #sticker{
     display: flex;
     justify-content: space-around;
+    
 }
 #stick-container{
     display: flex;
