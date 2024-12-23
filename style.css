@@ -415,7 +415,7 @@ html,body{
     width: 100%;
     z-index: -1;
     transform: rotate(180deg) scaleY(-1);
-    translate: -40%;
+    translate: -34%;
 }
 #cool-text-heading{
     translate: 0% 200%;
@@ -432,9 +432,10 @@ z-index: 2;
 
 canvas {
     display: block;
+    overflow: hidden;
     position: absolute;
     height: 30%;
-    width: 30%;
+    width: 32%;
     translate: 0% -290%;
     z-index: 1;
   }
