@@ -402,3 +402,29 @@ html,body{
         translate: 0px 10px;
     }
 }
+.slanted-gradient{
+    height: 70%;
+    width: 100%;
+    translate: 0% -29%;
+    background: linear-gradient(to right, black, black,rgb(2,2,2));
+    z-index: 5;
+    color: aliceblue;
+    display: flex;
+}
+#cool-img-container{
+    width: 100%;
+    z-index: -1;
+    transform: rotate(180deg) scaleY(-1);
+    translate: -40%;
+}
+#cool-text-heading{
+    translate: 0% 200%;
+    width: 200%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+}
+
+#cool-text-text{
+translate: -30% 150%;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
