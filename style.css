@@ -415,17 +415,19 @@ html,body{
     width: 100%;
     z-index: -1;
     transform: rotate(180deg) scaleY(-1);
-    translate: -34%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
 #cool-text-heading{
-    translate: 0% 200%;
+    translate: 15% 100%;
     width: 200%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
 }
 
 #cool-text-text{
-translate: -30% 150%;
+translate: 0% 120%;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 z-index: 2;
 }
