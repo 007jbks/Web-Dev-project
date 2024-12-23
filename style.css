@@ -427,4 +427,14 @@ html,body{
 #cool-text-text{
 translate: -30% 150%;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+z-index: 2;
 }
+
+canvas {
+    display: block;
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    translate: 0% -290%;
+    z-index: 1;
+  }
