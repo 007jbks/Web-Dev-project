@@ -437,7 +437,7 @@ canvas {
     overflow: hidden;
     position: absolute;
     height: 30%;
-    width: 32%;
+    width: 30%;
     translate: 0% -290%;
     z-index: 1;
   }
