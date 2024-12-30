@@ -1,10 +1,153 @@
-@media screen and (max-width:480px){
-header{
-display:flex;
-font-family:consolas;
+html,body{
+    padding: 0px;
+    margin: 0px;
+    background: black;
+    color: aliceblue;
+    height: 100%;
+    width: 100%;
+    font-family:Consolas;
+   
 }
+
+.nav-body{
+    width: 100%;
+    height: 40px;
+    background: rgb(13,13,13,0.7);
+    position: fixed;
+    z-index: 20;
+    backdrop-filter: blur(10px);
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
 }
-header{
-display:flex;
-font-family:consolas;
+
+#img{
+    translate: 0px -10px;
+    position: relative;
+    z-index: 1;
 }
+
+#hamburger{
+    height: 40px;
+    width: 40px;
+    transition: 500ms; 
+    display: flex;
+    justify-content: center;
+}
+
+#hamburger-img:hover{
+    transition: 500ms;
+    filter: opacity(0.5);
+}
+
+.nav-expanded-body.open{
+    transform: translateX(300px);
+}
+
+
+
+.button-container{
+    height: 40px;
+    width: 320px;
+    display: flex;
+    justify-content: end;
+}
+
+#button1,#button2,#button3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    font-family: Impact;
+}
+#button1:hover, #button2:hover, #button3:hover{
+    transition: 500ms;
+    color: rgb(255,255,255,0.5);
+}
+
+#nav-logo{
+    height: 100%;
+    width: 100px;
+
+    display: flex;
+
+}
+
+.nav-expanded-body{
+    height: 100%;
+    width: 300px;
+    color: aliceblue;
+    background: rgb(13,13,13,0.4);
+    backdrop-filter: blur(7px);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left:-300px;
+    transition: transform 1s ease;
+}
+
+#button-exp-container{
+    width: 100%;
+    height: 140px;
+    translate: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: black;
+    position: fixed;
+    overflow: hidden;
+}
+
+#button1-exp, #button2-exp, #button3-exp{
+    width: 120px;
+    height: 130px;
+    margin-right: 5px;
+    background: rgb(13,13,13,0.7);
+    border-radius: 10px;
+    color: aliceblue;
+    translate: 0px -140px;
+    transition: transform 1s ease;
+}
+
+#button1-exp.open, #button2-exp.open, #button3-exp.open{
+    transform: translateY(140px);
+}
+
+@media screen and(max-width:480px){
+
+}
+
+.welcome{
+    margin-top: 40px;
+width:100%;
+height: 100%;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
+overflow: hidden;
+}
+.wel-text{
+    height:100px;
+    width:100vw;
+    text-align: center;
+    font-family: Helvetica;
+    translate: 0px 30px;
+    position: relative;
+    z-index:1;
+    font-size: larger;
+}
+.main-image{
+    translate:100px 0px;
+    position: relative;
+    z-index: 0;
+}
+.buy{
+    position: relative;
+    z-index: 2;
+}
+
