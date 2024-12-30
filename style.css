@@ -1,1 +1,10 @@
-
+@media screen and (max width:480px){
+header{
+display:flex;
+font-family:consolas;
+}
+}
+header{
+display:flex;
+font-family:consolas;
+}
