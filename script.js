@@ -19,6 +19,10 @@ const hamburger= document.getElementById('hamburger');
         exp3.classList.toggle('open');
     });
 
+const link_to_buy = document.getElementById('buy-now');
+link_to_buy.addEventListener('click',()=>{
+    
+})
 let index = 0;
 const all = document.querySelectorAll('.slideshow>div');
 const next_button = document.getElementById('next-button');
@@ -41,3 +45,42 @@ const prev_button = document.getElementById('prev-button');
 prev_button.addEventListener('click',()=>{
  prev();
 });
+
+ const heads = document.querySelectorAll('.head');
+
+    // Function to check if the element is in the viewport
+    function checkVisibility() {
+        heads.forEach(head =>{
+      const rect = head.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        head.classList.add('visible'); // Trigger the animation by setting opacity to 1
+      }
+    });
+    }
+
+
+    // Listen for the scroll event and check visibility
+    window.addEventListener('scroll', checkVisibility);
+
+    // Initial check in case the element is already in view
+    checkVisibility();
+
+
+      // Get all elements with the 'head' class
+    const scs = document.querySelectorAll('.scroll-animate');
+
+    // Function to check if an element is in the viewport
+    function check() {
+      scs.forEach(sc => {
+        const rect = sc.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          sc.classList.add('visible'); // Add 'visible' class when the element is in view
+        }
+      });
+    }
+
+    // Listen for the scroll event and check visibility
+    window.addEventListener('scroll', check);
+
+    // Initial check in case any element is already in view
+    check();
