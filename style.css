@@ -5,7 +5,7 @@ html,body{
     color: white;
     height: 100%;
     width: 100%;
-    font-family:Tahoma;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica;
 }
 
 .nav-body{
@@ -127,7 +127,6 @@ height:100%;
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
-
 }
 
 .main-image{
@@ -180,8 +179,8 @@ background-size: cover;
 }
 .slideshow{
     margin-top: 50px;
-    width: 60%;
-    height:100%;
+    width: 70%;
+    height:500px;
     background-color: rgba(13,13,13);
     border-radius: 15px;
     box-shadow:5px 5px 15px grey;
@@ -252,6 +251,7 @@ cursor: pointer;
             color: inherit;}
 .cards{
     font-family: Tahoma;
+
 }
 .card1,.card2{
     height:48%;width:100%;
@@ -259,6 +259,7 @@ cursor: pointer;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 
 }    
 .pro,.ram,.gpu,.storage,.mux,.windows{
@@ -274,7 +275,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 box-shadow: 0px 0px 0px;
-transition: box-shadow 2s ease;
+transition: box-shadow 2s ease,height 0.5s ease, width 0.5s ease, border 1s ease;
 }
 .heading-brand{
     font-size: larger;
@@ -285,8 +286,112 @@ transition: box-shadow 2s ease;
       background: linear-gradient(90deg,lightblue,blue,purple);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
 }
 .pro:hover,.ram:hover,.gpu:hover,.storage:hover,.mux:hover,.windows:hover{
-         box-shadow: 5px 5px 10px rgb(13, 13,13, 1.0);
+         box-shadow: 5px 5px 20px rgb(13, 13,13, 1.0);
+         height: 98%;
+         width: 28%;
+         border:3px solid blue;
+}
+.head{
+    font-size:xx-large;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg,lightblue,lightblue,blue,purple);
+     -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    
+   transition: opacity 1s ease-out ,translate 0.2s ease-out;
+}
+.head.visible{
+    opacity: 1;
+     animation: fadeIn 1s ease-in forwards;
+     
+}
+.cpu-exp{
+    margin-left:40px ;
+    font-size:x-large;
+    color:darkgrey;
+    text-align:center;
+}
+.cpu-img{
+    background-image: url('D:/Media Files/9784.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(1,1,7);
+    background-size: cover;
+height: 100%;
+width: 100%;
+}
+.cpu-sum{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: larger;
+    color: grey;
+    font-weight: bold;
+    text-align: center;
+}
+.gpu-sum{
+    display: flex;
+    font-size: larger;
+    color: grey;
+    font-weight: bold;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+}
+
+.gpu-img{
+     background-image: url("D:/Media Files/geforce-rtx-40-series-new reso_cleanup_enhanced.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(1,1,7);
+    background-size: cover;
+height: 100%;
+width: 100%;
+}
+#gpu-head{
+    font-size:xx-large;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg,greenyellow,lightgreen,lightgreen,green);
+     -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+.gpu-exp{
+     margin-left:40px ;
+    font-size:x-large;
+    color:darkgrey;
+    text-align:center;
+}
+.tdp,.cores,.clock-speed{
+    text-align: center;
+}
+
+.gpu-sum1,.gpu-sum2{
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    color: grey;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    translate: 0px 20px;
+  }
+  to {
+    opacity: 1;
+    translate: 0px 0px;
+  }
+}
+.scroll-animate{
+    transition: opacity 1s ease-out,translate 1s ease-out;
+}
+.scroll-animate.visible{
+    opacity: 1;
+    animation: fadeIn 2s ease-in forwards;
 }
