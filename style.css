@@ -62,11 +62,13 @@ html,body{
     margin-left: 10px;
     margin-right: 10px;
     color: white;
-    font-family: Impact;
+    font-family:  Arial, sans-serif;
+    font-size: small;
 }
 #button1:hover, #button2:hover, #button3:hover{
     transition: 500ms;
     color: rgb(255,255,255,0.5);
+    cursor: pointer;
 }
 
 #nav-logo{
@@ -100,6 +102,7 @@ html,body{
     color: black;
     position: fixed;
     overflow: hidden;
+    z-index: 1000;
 }
 
 #button1-exp, #button2-exp, #button3-exp{
@@ -111,6 +114,28 @@ html,body{
     color: aliceblue;
     translate: 0px -140px;
     transition: transform 1s ease;
+}
+
+#mobile-exp{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+#mobile-exp1{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+
+.styled-link{
+    color: white;
+    text-decoration: none;
 }
 
 #button1-exp.open, #button2-exp.open, #button3-exp.open{
@@ -263,19 +288,20 @@ cursor: pointer;
 
 }    
 .pro,.ram,.gpu,.storage,.mux,.windows{
-    font-size: larger;
+    font-size: large;
 width: 25%;
 height: 95%;
-background-color: rgba(13, 13, 13, 1);
-background:linear-gradient(black,rgba(40, 40,40, 1.0),black);
-border-radius: 15px;
-border:3px solid darkgrey;
+background-color: rgba(5, 5, 30, 0.8);
+background:linear-gradient(black,rgba(5, 5,30, 0.8),black);
+border-radius: 25px;
+border:3px solid rgb(10,10,40,0.5);
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 box-shadow: 0px 0px 0px;
-transition: box-shadow 2s ease,height 0.5s ease, width 0.5s ease, border 1s ease;
+transition: box-shadow 3s ease,height 0.5s ease, width 1s ease, border 3s ease;
+color: rgb(255,255,255,0.5);
 }
 .heading-brand{
     font-size: larger;
@@ -288,11 +314,14 @@ transition: box-shadow 2s ease,height 0.5s ease, width 0.5s ease, border 1s ease
       -webkit-text-fill-color: transparent;
 }
 .pro:hover,.ram:hover,.gpu:hover,.storage:hover,.mux:hover,.windows:hover{
-         box-shadow: 5px 5px 20px rgb(13, 13,13, 1.0);
+         box-shadow: 5px 5px 20px rgb(10, 10,60, 1.0);
          height: 98%;
          width: 28%;
-         border:3px solid blue;
-}
+         border:3px solid rgb(17, 17, 233);
+         transition: 2s;
+         background:linear-gradient(black,rgba(5, 5,50, 0.8),black);
+        filter: hue-rotate(30deg);
+        }
 .head{
     font-size:xx-large;
     font-weight: bold;
@@ -363,6 +392,7 @@ width: 100%;
     font-size:x-large;
     color:darkgrey;
     text-align:center;
+    background: linear-gradient(to top, black,transparent);
 }
 .tdp,.cores,.clock-speed{
     text-align: center;
@@ -394,4 +424,25 @@ width: 100%;
 .scroll-animate.visible{
     opacity: 1;
     animation: fadeIn 2s ease-in forwards;
+}
+
+#disp-head{
+     background: linear-gradient(90deg,lightblue,lightblue,blue);
+     -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+.disp-exp{
+      margin-left:40px ;
+    font-size:x-large;
+    color:darkgrey;
+    text-align:center;
+}
+.disp-sum{
+     display: flex;
+    justify-content: space-evenly;
+    font-size: larger;
+    color: grey;
+    font-weight: bold;
+    text-align: center;
 }
