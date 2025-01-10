@@ -205,11 +205,11 @@ background-size: cover;
 }
 .slideshow{
     margin-top: 50px;
-    width: 70%;
+    width: 40%;
     height:500px;
     background-color: rgba(13,13,13);
     border-radius: 15px;
-    box-shadow:5px 5px 15px rgb(80,0,40);
+
     position: relative;
     z-index: 0;
     overflow: hidden;
@@ -233,23 +233,23 @@ transform: translateY(50px);
 }
 }
 .item1{
-    background:yellow;
+    background-color: black;
     z-index: 5;
 }
 .item2{
-    background-color: darkred;
+background-color: black;
     z-index: 4;
 }
 .item3{
-    background-color: green;
+background-color: black;
     z-index: 3;
 }
 .item4{
-    background-color: blue;
+    background-color: black;
     z-index: 2;
 }
 .item5{
-    background-color: pink;
+    background-color: black;
     z-index: 1;
 }
 .navigation{
@@ -351,7 +351,7 @@ animation: width 0.5s ease-in-out, height 0.5s ease-in-out;
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: conic-gradient(from var(--angle), rgb(0,106,255),transparent,transparent);
+    background: conic-gradient(from var(--angle), rgb(0,106,255), rgb(25,25,112),rgb(25,25,112),rgb(0,106,255));
     border-radius: inherit;
     padding: 5px;
     animation: circle 5s linear infinite;
@@ -568,7 +568,7 @@ width: 100%;
 }
 #resizer{
     position: absolute;
-    width: 1200px;
+    width: 1010px;
     
     height: 0;
     translate: 5px -250px;
