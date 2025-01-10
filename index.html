@@ -100,39 +100,48 @@ Lorem, ipsum dolor.
 <br><br>
 <div class="cards" style="height:100%;width:100%;background-color: black;overflow: hidden;display:flex;flex-direction:column;justify-content: space-between;">
     <div class="card1" >
-        <div class="pro" >
-            Up to
-<span class="heading-brand">Intel Core™ i9<br><center>13900H</center></span>
-13th Gen processor
+        <div class="wrapcard">
+            <div class="pro" >
+                <div class="txt-cont-card">
+                    Up to <br>
+    <span class="heading-brand">Intel Core™ i9<br><center>13900H</center></span>
+    13th Gen processor
+                </div>
+                
+            </div>
+            <div class="ram">
+                Up to 
+                <span class="heading-brand">16 GB DDR5 <br> <center>4800 MHz</center> </span>
+                Memory
+    
+            </div>
+            <div class="gpu">
+                Up to 
+                <span class="heading-brand">NVIDIA GeForce <br><center>RTX™ 4050</center> </span>
+    with NVIDIA Studio<br> <center> Driver support</center>
+            </div>
         </div>
-        <div class="ram">
-            Up to 
-            <span class="heading-brand">16 GB DDR5 <br> <center>4800 MHz</center> </span>
-            Memory
-
-        </div>
-        <div class="gpu">
-            Up to 
-            <span class="heading-brand">NVIDIA GeForce <br><center>RTX™ 4050</center> </span>
-with NVIDIA Studio<br> <center> Driver support</center>
-        </div>
+        
     </div>
     <div class="card2">
-        <div class="storage">
-            Fast
-  <span class="heading-brand"><center>512 GB</center> PCIe 4.0 SSD
+        <div class="wrapcard">
+            <div class="storage">
+                Fast
+      <span class="heading-brand"><center>512 GB</center> PCIe 4.0 SSD
+            </div>
+            <div class="mux">
+                Dedicated
+            <span class="heading-brand">      
+    MUX Switch</span>
+    <center>for better gaming experience</center>
+            </div>
+            <div class="windows">Equipped with
+     <span class="heading-brand">      
+    Windows 11 Pro</span>
+            </div>
         </div>
-        <div class="mux">
-            Dedicated
-        <span class="heading-brand">      
-MUX Switch</span>
-<center>for better gaming experience</center>
         </div>
-        <div class="windows">Equipped with
- <span class="heading-brand">      
-Windows 11 Pro</span>
-        </div>
-    </div>
+        
 </div>
 
 <br><br><br><br>
@@ -209,9 +218,21 @@ cinematic-quality rendering</div>
       -webkit-text-fill-color: transparent;">OLED</span>
     </div>
     <br><br>
-    <div class="disp-img">
-        <img src="C:\Users\Kartik\Downloads\Screenshot 2025-01-09 193413.png" style="height:auto;width:100%;">
+    <div class="disp-image-container">
+        <div class="disp-image-parent">
+            <div class="disp-image1">
+                <img src="OLED.png" alt="" style="height: 100%; width: 1000px;">
+            </div>
+            <div class="disp-image2" id="div2">
+                <img src="LCD.png" alt="" style="height: 100%; width: 1000px;">
+            </div>
+        </div>
     </div>
+
+    <div class="disp-control">
+        <input type="range" id="resizer">
+    </div>
+
     <br><br>
     <div class="disp-exp">
         The world’s first 120 Hz refresh rate, 0.2 ms response time OLED laptop display <br>gives you so much more on top of the best colors and quality for any content!
