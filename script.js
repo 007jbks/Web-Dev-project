@@ -84,3 +84,13 @@ prev_button.addEventListener('click',()=>{
 
     // Initial check in case any element is already in view
     check();
+
+    const div2= document.getElementById('div2');
+    const resizer= document.getElementById('resizer');
+    resizer.min= 0;
+    resizer.max= 800;
+    resizer.value= resizer.mid;
+    resizer.addEventListener('input', ()=> {
+      const newWidth= resizer.value + 'px';
+      div2.style.width = newWidth;
+    });
