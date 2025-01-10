@@ -29,10 +29,11 @@ html,body{
 
 #hamburger{
     height: 40px;
-    width: 40px;
+    width: 45px;
     transition: 500ms; 
     display: flex;
     justify-content: center;
+    translate: 5px;
 }
 
 #hamburger-img:hover{
@@ -208,7 +209,7 @@ background-size: cover;
     height:500px;
     background-color: rgba(13,13,13);
     border-radius: 15px;
-    box-shadow:5px 5px 15px grey;
+    box-shadow:5px 5px 15px rgb(80,0,40);
     position: relative;
     z-index: 0;
     overflow: hidden;
@@ -221,7 +222,7 @@ background-size: cover;
 width: 100%;
 height: 100%;
 position: absolute;
-transition: ;
+
 }
 @keyframes animate{
 0%{
@@ -256,12 +257,21 @@ transform: translateY(50px);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px;
-    height: 60px;
-    background-color:rgba(25,25,25);
+    width: 100px;
+    height: 50px;
+    color: gray;
+    background-color:rgba(25,25,25, 0.5);
     border-radius: 20px;
     justify-content: space-around;
 }
+
+.navigation:hover{
+    box-shadow:5px 5px 15px rgb(80,0,40);
+    transition: 500ms ease-in-out;
+    opacity: 0.5;
+    color: aliceblue;
+}
+
 .prev{
 font-size: large;
 }
@@ -276,7 +286,6 @@ cursor: pointer;
             color: inherit;}
 .cards{
     font-family: Tahoma;
-
 }
 .card1,.card2{
     height:48%;width:100%;
@@ -286,42 +295,108 @@ cursor: pointer;
     align-items: center;
     flex-wrap: wrap;
 
-}    
+}
+
+.pro{
+    width: 100%;
+    height: 100%;
+}
+
+
+.txt-cont-card{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.wrapcard{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}  
+
 .pro,.ram,.gpu,.storage,.mux,.windows{
+    position: relative;
     font-size: large;
 width: 25%;
 height: 95%;
 background-color: rgba(5, 5, 30, 0.8);
-background:linear-gradient(black,rgba(5, 5,30, 0.8),black);
+background:linear-gradient(black,rgba(5, 5,30, 1),black);
 border-radius: 25px;
 border:3px solid rgb(10,10,40,0.5);
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-box-shadow: 0px 0px 0px;
-transition: box-shadow 3s ease,height 0.5s ease, width 1s ease, border 3s ease;
 color: rgb(255,255,255,0.5);
+animation: width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
-.heading-brand{
-    font-size: larger;
-    font-weight: bold;
-    font-family: Tahoma;
-    margin-top: 10px;
-    margin-bottom: 10px;
-      background: linear-gradient(90deg,lightblue,blue,purple);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+
+.pro::after, .pro::before, .ram::after,.ram::before,.gpu::after,.gpu::before,.storage::after,.storage::before,.mux::after,.mux::before,.windows::after, .windows::before{
+    content: '';
+    position: absolute;
+    top: 2;
+    left: 3;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: conic-gradient(from var(--angle), rgb(0,106,255),transparent,transparent);
+    border-radius: inherit;
+    padding: 5px;
+    animation: circle 5s linear infinite;
+    opacity: 0;
 }
-.pro:hover,.ram:hover,.gpu:hover,.storage:hover,.mux:hover,.windows:hover{
-         box-shadow: 5px 5px 20px rgb(10, 10,60, 1.0);
-         height: 98%;
-         width: 28%;
-         border:3px solid rgb(17, 17, 233);
-         transition: 2s;
-         background:linear-gradient(black,rgba(5, 5,50, 0.8),black);
-        filter: hue-rotate(30deg);
+.pro::before, .gpu::before, .mux::before, .storage::before, .ram::before, .windows::before{
+    filter: blur(0.9rem);
+}
+
+@keyframes circle{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.pro:hover,.gpu:hover,.ram:hover,.storage:hover, .mux:hover, .windows:hover {
+    height: 96%;
+    width: 28%;
+    transition: 1s;
+}
+
+.pro:hover::before, .pro:hover::after,.gpu:hover::before,.gpu:hover::after, .ram:hover::after,.ram:hover::before, .storage:hover::after,.storage:hover::before, .mux:hover::after,.mux:hover::before, .windows:hover::after,.windows:hover::before{
+    opacity: 1;
+    transition: 1s;
+}
+
+        .heading-brand{
+            font-size: larger;
+            font-weight: bold;
+            font-family: Tahoma;
+            margin-top: 10px;
+            margin-bottom: 10px;
+              background: linear-gradient(90deg,lightblue,blue,purple);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
         }
+
 .head{
     font-size:xx-large;
     font-weight: bold;
@@ -427,7 +502,7 @@ width: 100%;
 }
 
 #disp-head{
-     background: linear-gradient(90deg,lightblue,lightblue,blue);
+     background: linear-gradient(270deg,black, silver);
      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 }
@@ -445,4 +520,81 @@ width: 100%;
     color: grey;
     font-weight: bold;
     text-align: center;
+}
+
+.disp-image-container{
+    height: 600px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.disp-image-parent{
+    background-color: black;
+    height: 100%;
+    width: 1000px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.disp-image1{
+    background-color: black;
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+.disp-image2{
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    z-index: 3;
+    background-color: pink;
+    border: 4px solid black;
+}
+.disp-control{
+    height: 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#resizer{
+    position: absolute;
+    width: 1200px;
+    
+    height: 0;
+    translate: 5px -250px;
+    z-index: 5;
+}
+
+#resizer::-webkit-slider-thumb{
+
+    
+    width: 40px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: linear-gradient(to right, rgb(7, 7, 7) 45%, white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: aliceblue;
+    position: relative;
+}
+
+#slide-txt{
+    font-size: xx-large;
+    color: gray;
+    opacity: 0.5;
+    translate: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
